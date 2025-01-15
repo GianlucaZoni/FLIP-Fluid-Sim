@@ -1,3 +1,5 @@
+import { scene } from './scene.js'
+
 export function pourFluid() {
   console.log('Pouring fluid...')
 
@@ -8,7 +10,7 @@ export function pourFluid() {
 
 	canvas.focus();
 
-	var simHeight = 3.0;	
+	var simHeight = 5.0;	
 	var cScale = canvas.height / simHeight;
 	var simWidth = canvas.width / cScale;
 
@@ -606,10 +608,10 @@ export function pourFluid() {
 
 	// ----------------- end of simulator ------------------------------
 
-	var scene = 
+	/* var scene = 
 	{
 		gravity : -9.81,
-//		gravity : 0.0,
+//		//gravity : 0.0,
 		dt : 1.0 / 120.0,
 		flipRatio : 0.9,
 		numPressureIters : 100,
@@ -628,7 +630,7 @@ export function pourFluid() {
 		showParticles: true,
 		showGrid: false,
 		fluid: null
-	};
+	}; */
 
 	function setupScene() 
 	{
