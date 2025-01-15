@@ -1,24 +1,18 @@
 import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+
+import { pourFluid} from './fluid.js'
 
 document.querySelector('#app').innerHTML = `
   <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
+    <input type = "checkbox" checked  onclick = "scene.showParticles = !scene.showParticles">Particles &nbsp; 
+	  <input type = "checkbox" onclick = "scene.showGrid = !scene.showGrid">Grid &nbsp;
+	  <input type = "checkbox" checked onclick = "scene.compensateDrift = !scene.compensateDrift">Compensate Drift &nbsp;
+	  <input type = "checkbox" checked onclick = "scene.separateParticles = !scene.separateParticles">Separate Particles &nbsp;
+	  PIC
+	  <input type = "range" min = "0" max = "10" value = "9" class = "slider" onchange="scene.flipRatio = 0.1 * this.value"> FLIP 
+    <br>
+	  <canvas id="myCanvas" style="border:2px solid"></canvas>
   </div>
 `
 
-setupCounter(document.querySelector('#counter'))
+pourFluid(document.querySelector<HTMLCanvasElement>('#myCanvas'))
