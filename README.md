@@ -1,4 +1,4 @@
-# WEBGL 2D FLIP Fluid Simulation
+# 2D WEBGL FLIP Fluid Simulation
 This project is a fluid simulation using the FLIP (Fluid-Implicit Particle) method. The simulation is rendered using WebGL and provides an interactive interface for users to manipulate the fluid and observe its behavior.
 ## Features
 - Real-time color classification
@@ -19,3 +19,5 @@ This project is a fluid simulation using the FLIP (Fluid-Implicit Particle) meth
 ## Technologies Used
 - Vite + Vanilla JS
 - WEBGL
+## Reference
+[FLIP Water Simulator](https://matthias-research.github.io/pages/tenMinutePhysics/18-flip.pdf) by [Ten Minute Physics](https://www.youtube.com/@tenminutephysics)
