@@ -1069,7 +1069,9 @@ export function pourFluid() {
 		}
 	});
 
-	function toggleStart()
+	//not used rn
+    
+    function toggleStart()
 	{
 		var button = document.getElementById('startButton');
 		if (scene.paused)
