@@ -1,18 +1,33 @@
 import './style.css'
 
-import { pourFluid} from './fluid.js'
+import { pourFluid } from './fluid.js'
 import { scene } from './scene.js'
 
 document.querySelector('#app').innerHTML = `
-  <div>
-    <input type="checkbox" id="showParticles" checked>Particles &nbsp; 
-    <input type="checkbox" id="showGrid">Grid &nbsp;
-    <input type="checkbox" id="compensateDrift" checked>Compensate Drift &nbsp;
-    <input type="checkbox" id="separateParticles" checked>Separate Particles &nbsp;
-    PIC
-    <input type="range" id="flipRatio" min="0" max="10" value="9" class="slider"> FLIP 
-    <br>
-    <canvas id="myCanvas" style="border:2px solid"></canvas>
+
+<canvas id="myCanvas"></canvas>
+
+  <div class="controls">
+    <div class="control">
+      <input type="checkbox" id="showParticles" checked>
+      <label for="showParticles">Particles</label>
+    </div>
+    <div class="control">
+      <input type="checkbox" id="showGrid">
+      <label for="showGrid">Grid</label>
+    </div>
+    <div class="control">
+      <input type="checkbox" id="compensateDrift" checked>
+      <label for="compensateDrift">Compensate Drift</label>
+    </div>
+    <div class="control">
+      <input type="checkbox" id="separateParticles" checked>
+      <label for="separateParticles">Separate Particles</label>
+    </div>
+    <div class="control">
+      <input type="range" id="flipRatio" min="0" max="10" value="9" class="slider">
+      <label for="flipRatio">PIC to FLIP Ratio</label>
+    </div>
   </div>
 `
 
