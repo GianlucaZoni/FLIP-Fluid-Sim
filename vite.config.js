@@ -1,4 +1,4 @@
 export default {
     // config options
-    base: "/FLIP-Fluid-Sim/"
+    base: "/FLIP-Fluid-Sim"
   }
